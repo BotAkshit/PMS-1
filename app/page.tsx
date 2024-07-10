@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button"
 
 export default function Home() {
   return (
-    <div>
+    <div className="flex h-screen max-h-screen">
       <h1 className="text-white text-3xl underline">Home</h1>
       <button>Click me</button>
     </div>
