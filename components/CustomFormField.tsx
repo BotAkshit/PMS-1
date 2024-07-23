@@ -1,6 +1,7 @@
 'use Client'
 
 
+
 import {
     FormControl,
     FormDescription,
@@ -22,7 +23,7 @@ interface CustomProps{
   label?:string,
   placeholder?:string,
   iconSrc?: string,
-  iconAlt?:String,
+  iconAlt?:string,
   disabled?:boolean,
   dateFormat?: string,
   showTimeSelect?: boolean,
@@ -41,10 +42,10 @@ const RenderField = ({field,props}:{field:any;props:CustomProps}) => {
         <div className="flex-rounded-md border border-dark-500 bg-dark-400">
           {props.iconSrc && (
             <Image 
-               src = {iconSrc}
+               src={props.iconSrc}
                height={24}
                width={24}
-               alt={iconAlt||'icon'}
+               alt={props.iconAlt || "icon"}
                className='ml-2'
             />
           )}
