@@ -23,7 +23,7 @@ interface CustomProps{
   label?:string,
   placeholder?:string,
   iconSrc?: string,
-  iconAlt?:String,
+  iconAlt?:string,
   disabled?:boolean,
   dateFormat?: string,
   showTimeSelect?: boolean,
