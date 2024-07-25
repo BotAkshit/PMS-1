@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function Home() {
   return (
-    <div className="flex h-screen max-h-screen">
+    <div className="flex items-center h-screen max-h-screen">
 
       
       <section className="remove-scrollbar container my-auto">
@@ -18,7 +18,7 @@ export default function Home() {
         />
 
         <PatientForms />
-        <div className="text-14-regular mt-20 justify-between">
+        <div className="flex text-14-regular mt-20 justify-between">
           <p className="justify-items-end text-dark-600 xl:text-left">
             © 2024 CarePulse
             </p>
