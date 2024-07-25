@@ -15,6 +15,8 @@ import {
 import { FormFieldType } from "./forms/PatientForms"
 import Image from "next/image"
 import { FilePen } from "lucide-react"
+import 'react-phone-number-input/style.css'
+import PhoneInput from 'react-phone-number-input'
 
 interface CustomProps{
   control: Control<any>,
@@ -31,7 +33,6 @@ interface CustomProps{
   renderSkeleton?: (field: any) => React.ReactNode,
 }  
 
-
 const RenderField = ({field,props}:{field:any;props:CustomProps}) => {
     const {fieldType, iconSrc, iconAlt, placeholder } = props;  
     
@@ -39,7 +40,7 @@ const RenderField = ({field,props}:{field:any;props:CustomProps}) => {
     switch (props.fieldType) {
       case FormFieldType.INPUT:
        return (
-        <div className="flex-rounded-md border border-dark-500 bg-dark-400">
+        <div className="flex items-center rounded-md border border-dark-500 bg-dark-400">
           {props.iconSrc && (
             <Image 
                src={props.iconSrc}
@@ -58,6 +59,22 @@ const RenderField = ({field,props}:{field:any;props:CustomProps}) => {
           </FormControl>
         </div>
        )
+      case FormFieldType.PHONE_INPUT:
+        return (
+         <FormControl>
+           <PhoneInput 
+            defaultCountry="IN"
+            placeholder={placeholder}
+            international
+            withCountryCallingCode
+            value={field.value as string | undefined}
+            onChange ={field.onChange}
+            className="input-phone"
+           />
+           
+         </FormControl>
+
+        )
       default:
         break; 
     }
