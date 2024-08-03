@@ -22,8 +22,6 @@ export enum FormFieldType {
     SKELETION = 'skeleton'
 } 
  
-
- 
 const PatientForms = () => {
   const router = useRouter();
   const [isLoading , setIsLoading] = useState(false);
