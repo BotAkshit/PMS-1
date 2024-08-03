@@ -16,7 +16,7 @@ export default function Home() {
          alt="patient"
          className="mb-12 h-10 w-fit"
         />
-
+        
         <PatientForms />
         <div className="flex text-14-regular mt-20 justify-between">
           <p className="justify-items-end text-dark-600 xl:text-left">
